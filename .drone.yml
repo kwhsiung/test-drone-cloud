@@ -8,6 +8,9 @@ steps:
       - npm install
   - name: release
     image: node:latest
+    environment:
+      CONVENTIONAL_GITHUB_RELEASER_TOKEN:
+        from_secret: key
     commands:
       - npm run release
     when:

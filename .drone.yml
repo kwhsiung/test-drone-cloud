@@ -3,8 +3,8 @@ name: default
 
 steps:
   - name: build
-      image: node:latest
-      commands: npm install
+    image: node:latest
+    commands: npm install
   - name: release
     image: node:latest
     commands: npm run release

@@ -4,9 +4,11 @@ name: default
 steps:
   - name: build
     image: node:latest
-    commands: npm install
+    commands:
+      - npm install
   - name: release
     image: node:latest
-    commands: npm run release
+    commands:
+      - npm run release
     when:
       event: tag

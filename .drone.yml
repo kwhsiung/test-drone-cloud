@@ -5,3 +5,5 @@ pipeline:
   release:
     image: node:latest
     commands: npm run release
+    when:
+      event: tag

@@ -1,8 +1,11 @@
-pipeline:
-  build:
-    image: node:latest
-    commands: npm install
-  release:
+kind: pipeline
+name: default
+
+steps:
+  - name: build
+      image: node:latest
+      commands: npm install
+  - name: release
     image: node:latest
     environment:
       CONVENTIONAL_GITHUB_RELEASER_TOKEN:

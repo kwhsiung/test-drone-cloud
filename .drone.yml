@@ -4,9 +4,6 @@ pipeline:
     commands: npm install
   release:
     image: node:latest
-    environment:
-      CONVENTIONAL_GITHUB_RELEASER_TOKEN:
-        from_secret: CONVENTIONAL_GITHUB_RELEASER_TOKEN
     commands: npm run release
     when:
       event: tag

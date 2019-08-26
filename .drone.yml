@@ -2,6 +2,6 @@ pipeline:
   build:
     image: node:latest
     commands: npm install
-  test:
+  release:
     image: node:latest
-    commands: npm run test
+    commands: npm run release

@@ -9,7 +9,7 @@ steps:
   - name: test-git
     image: node:latest
     commands:
-      - git log
+      - git tag
   - name: release
     image: node:latest
     environment:

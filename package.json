@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prerelease": "echo $CONVENTIONAL_GITHUB_RELEASER_TOKEN",
-    "release": "conventional-github-releaser -p angular -t $CONVENTIONAL_GITHUB_RELEASER_TOKEN",
+    "release": "DEBUG=conventional-github-releaser conventional-github-releaser -p angular -t $CONVENTIONAL_GITHUB_RELEASER_TOKEN",
     "commit": "npx git-cz"
   },
   "repository": {

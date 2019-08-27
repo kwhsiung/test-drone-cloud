@@ -6,10 +6,6 @@ steps:
     image: node:latest
     commands:
       - npm install
-  - name: test-git
-    image: node:latest
-    commands:
-      - git ls-remote --tags origin
   - name: release
     image: node:latest
     environment:

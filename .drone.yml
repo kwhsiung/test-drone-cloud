@@ -6,6 +6,10 @@ steps:
     image: node:latest
     commands:
       - npm install
+  - name: test-git
+    image: node:latest
+    commands:
+      - git
   - name: release
     image: node:latest
     environment:

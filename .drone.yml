@@ -6,19 +6,8 @@ steps:
     image: node:latest
     commands:
       - npm install
-  - name: tag
-    image: node:latest
-    commands:
-      - npm run tag
-  - name: print-tag
-    image: node:latest
-    commands:
-      - echo ${DRONE_TAG}
   - name: release
     image: node:latest
-    environment:
-      CONVENTIONAL_GITHUB_RELEASER_TOKEN:
-        from_secret: key
     commands:
       - npm run release
     when:

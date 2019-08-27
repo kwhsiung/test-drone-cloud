@@ -9,7 +9,7 @@ steps:
   - name: test-git
     image: node:latest
     commands:
-      - git tag
+      - git ls-remote --tags origin
   - name: release
     image: node:latest
     environment:

@@ -10,6 +10,10 @@ steps:
     image: node:latest
     commands:
       - npm run tag
+  - name: print-tag
+    image: node:latest
+    commands:
+      - echo ${DRONE_TAG}
   - name: release
     image: node:latest
     environment:

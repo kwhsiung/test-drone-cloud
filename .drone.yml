@@ -6,6 +6,10 @@ steps:
     image: node:latest
     commands:
       - npm install
+  - name: tag
+    image: node:latest
+    commands:
+      - npm run tag
   - name: release
     image: node:latest
     environment:

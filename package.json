@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release": "standard-changelog",
+    "release": "conventional-github-releaser -p angular",
     "commit": "npx git-cz"
   },
   "repository": {

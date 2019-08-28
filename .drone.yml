@@ -2,10 +2,21 @@ kind: pipeline
 name: default
 
 steps:
+  - name: fetch
+    image: node:latest
+    commands:
+    - git fetch --tags
+
+  - name: test-tag
+    image: node:latest
+    commands:
+    - git tag
+
   - name: build
     image: node:latest
     commands:
       - npm install
+
   - name: release
     image: node:latest
     commands:

@@ -15,7 +15,8 @@ steps:
   - name: bump-version
     image: node:latest
     commands:
-      - echo ${DRONE_TAG}
+      - 'npm version ${DRONE_TAG} --no-git-tag-version -m "chore: bump version"'
+      - git push origin master
     when:
       event: tag
 

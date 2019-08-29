@@ -16,6 +16,8 @@ steps:
     image: node:latest
     commands:
       - npm version ${DRONE_TAG} --no-git-tag-version
+      - git config --global user.email "you@example.com"
+      - git config --global user.name "Your Name"
       - git add package.json
       - 'git commit -m "chore: bump to ${DRONE_TAG}"'
       - git push origin master

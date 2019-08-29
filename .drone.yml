@@ -20,8 +20,7 @@ steps:
       - git config --global user.name "Your Name"
       - git add package.json
       - 'git commit -m "chore: bump to ${DRONE_TAG}"'
-      # - git push origin master
-      - git show-ref
+      - git push origin HEAD:master
     when:
       event: tag
 

@@ -12,6 +12,13 @@ steps:
     commands:
       - npm install
 
+  - name: bump-version
+    image: node:latest
+    commands:
+      - echo ${DRONE_TAG}
+    when:
+      event: tag
+
   - name: release
     image: node:latest
     environment:
